@@ -1,0 +1,43 @@
+site_name: TCBYH
+site_description: personal site by tcbyh
+site_url: https://tcbyh.github.io/
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+
+plugins:
+  - search
+  - mermaid2
+  - blog:
+      # post_slugify: !!python/object/apply:ext.slugs.slugify
+      #   kwds:
+      #     short: true
+      blog_toc: false
+      archive_date_format: MM/dd/yyyy
+      archive_url_date_format: MM/dd/yyyy
+      categories_allowed:
+        - 文献整理
+        - 工具手册
+        - 笔记&教程
+        - 代码片段
+        - 生活方式
+      authors_profiles: true
+      pagination_per_page: 5
+  - tags:
+      tags_file: blog/tags.md
+  - meta
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+    - Tags: blog/tags.md
+
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/mastodon
+#       name: squidfunk on Mastodon
+#       link: https://fosstodon.org/@squidfunk
